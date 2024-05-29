@@ -1,4 +1,4 @@
-const api_key = '3f0dee0b7ef8dc1ddf89dc85bd9bb0f5';
+const api_key = '30f79eac8f2abb1b72a3955b3e52147d';
 
 export const url = {
   // endpoint urls
@@ -7,15 +7,15 @@ export const url = {
   },
 
   geocode(loca) {
-    return `http://api.openweathermap.org/geo/1.0/direct?q=${loca}&limit=5`;
+    return `https://api.openweathermap.org/geo/1.0/direct?q=${loca}&limit=5`;
   },
 
   forecast(lat, lon) {
-    return `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&units=matric`;
+    return `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&units=metric`;
   },
 
-  airpollution(lat, lon) {
-    return `https://api.openweathermap.org/data/2.5/air_pollution?lat=${lat}&lon=${lon}&units=matric`;
+  airPollution(lat, lon) {
+    return `https://api.openweathermap.org/data/2.5/air_pollution?lat=${lat}&lon=${lon}&units=metric`;
   },
 };
 

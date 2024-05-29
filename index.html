@@ -19,12 +19,12 @@
     <!-- Main CSS File Link -->
     <link rel="stylesheet" href="css/style.css" />
 
-    <!--js module link-->
-    <script src="js/api.js" type="module"></script>
-    <script src="js/route.js" type="module"></script>
-    <script src="js/module.js" type="module"></script>
-    <script src="js/app.js" type="module"></script>
-    <script src="js/main.js" type="module"></script>
+    <!-- js module link -->
+    <script src="./js/api.js" type="module"></script>
+    <script src="./js/route.js" type="module"></script>
+    <script src="./js/module.js" type="module"></script>
+    <script src="./js/app.js" type="module"></script>
+    <script src="./js/main.js" type="module"></script>
   </head>
   <body>
     <!-- Header -->
@@ -42,6 +42,7 @@
               placeholder="도시명 검색..."
               class="search-field"
               data-search-field
+              autocomplete="off"
             />
 
             <span class="m-icon">search</span>
@@ -71,35 +72,10 @@
       <article class="container" data-container>
         <div class="content-left">
           <!-- Current Weather Box -->
-          <section class="section current-weather" data-current-weather>
-            <div class="card card-lg current-weather-card">
-              <h2 class="title-2 card-title">Now</h2>
-              <div class="wrapper">
-                <p class="heading">
-                  25&deg;<sup>c</sup>
-                  escape string referrence :
-                  http://kor.pe.kr/util/4/charmap2.htm
-                </p>
-                <img
-                  src="images/weather_icons/01d.png"
-                  alt="Overcast Clouds"
-                  class="weather-icon"
-                />
-              </div>
-
-              <p class="body-3">Overcast Clouds</p>
-              <ul class="meta-list">
-                <li class="meta-item">
-                  <span class="m-icon">Calendar_today</span>
-                  <p class="title-3 meta-text">Thursday 16, Feb</p>
-                </li>
-                <li class="meta-item">
-                  <span class="m-icon">location_on</span>
-                  <p class="title-3 meta-text">London, GB</p>
-                </li>
-              </ul>
-            </div>
-          </section>
+          <section
+            class="section current-weather"
+            data-current-weather
+          ></section>
 
           <!-- Forecast Box -->
           <section class="section forecast" data-5-day-forecast></section>
@@ -132,6 +108,8 @@
             </p>
           </footer>
         </div>
+
+        <div class="loading" data-loading></div>
       </article>
     </main>
   </body>

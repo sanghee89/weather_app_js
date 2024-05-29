@@ -1,6 +1,6 @@
 import { updateWeather } from './main.js';
 
-const defaultLocation = '#/weather?37.55551, 126.9199'; //어메이징농카이
+const defaultLocation = '#/weather?lat=37.55549&lon=126.9199'; // 어메이징 농카이 위치
 
 const currentLocation = function () {
   window.navigator.geolocation.getCurrentPosition(
@@ -29,7 +29,7 @@ const routes = new Map([
 
 const checkHash = function () {
   const requestURL = window.location.hash.slice(1);
-  // console.log(requestURL);
+  console.log(requestURL);
   const [route, query] = requestURL.includes
     ? requestURL.split('?')
     : [requestURL, ''];
